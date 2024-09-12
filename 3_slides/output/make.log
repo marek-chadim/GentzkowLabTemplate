@@ -1,5 +1,4 @@
-make.sh started at 2024-09-12 08:53:02
-Executing: bash my_shell_script.sh
+make.sh started at 2024-09-12 09:24:59
 Executing: latexmk my_project_slides.tex -pdf -bibtex
 Rc files read:
   NONE
@@ -785,4 +784,4 @@ Latexmk: Examining 'my_project_slides.log'
 Latexmk: Log file says output to 'my_project_slides.pdf'
 Latexmk: All targets (my_project_slides.pdf) are up-to-date
 
-make.sh finished at 2024-09-12 08:53:10
+make.sh finished at 2024-09-12 09:25:04

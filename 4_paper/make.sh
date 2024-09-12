@@ -25,7 +25,9 @@ mkdir -p "${MAKE_SCRIPT_DIR}/output"
 # (Make sure this section is updated to pull in all needed input files!)
 rm -rf "${MAKE_SCRIPT_DIR}/input"
 mkdir -p "${MAKE_SCRIPT_DIR}/input"
-# cp my_source_files "${MAKE_SCRIPT_DIR}/input/"
+cp "${REPO_ROOT}/2_analysis/output/figure_city.jpg" "${MAKE_SCRIPT_DIR}/input/"
+cp "${REPO_ROOT}/2_analysis/output/figure_hwy.jpg" "${MAKE_SCRIPT_DIR}/input/"
+cp "${REPO_ROOT}/2_analysis/output/table_reg.tex" "${MAKE_SCRIPT_DIR}/input/"
 
 # Tell user what we're doing
 echo -e "\n\nMaking module \033[35m${MODULE}\033[0m with shell ${SHELL}"
@@ -38,7 +40,7 @@ echo -e "\n\nMaking module \033[35m${MODULE}\033[0m with shell ${SHELL}"
     echo -e "make.sh started at $(date '+%Y-%m-%d %H:%M:%S')"
 
     cd source
-    run_shell my_shell_script.sh "${LOGFILE}"
+    #run_shell my_shell_script.sh "${LOGFILE}"
 	run_latex my_project.tex "${LOGFILE}"
 
 ) 2>&1 | tee "${LOGFILE}"

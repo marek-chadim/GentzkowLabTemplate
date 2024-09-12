@@ -38,7 +38,7 @@ echo -e "\n\nMaking module \033[35m${MODULE}\033[0m with shell ${SHELL}"
     echo -e "make.sh started at $(date '+%Y-%m-%d %H:%M:%S')"
 
     cd source
-    run_shell my_shell_script.sh "${LOGFILE}"
+    #run_shell my_shell_script.sh "${LOGFILE}"
 	run_latex my_project_slides.tex "${LOGFILE}"
 
 ) 2>&1 | tee "${LOGFILE}"

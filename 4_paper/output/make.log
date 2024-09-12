@@ -1,15 +1,19 @@
-make.sh started at 2024-09-12 08:53:10
-Executing: bash my_shell_script.sh
+make.sh started at 2024-09-12 09:25:04
 Executing: latexmk my_project.tex -pdf -bibtex
 Rc files read:
   NONE
 Latexmk: This is Latexmk, John Collins, 7 Apr. 2024. Version 4.85.
-No existing .aux file, so I'll make a simple one, and require run of *latex.
 Latexmk: applying rule 'pdflatex'...
 Rule 'pdflatex':  Reasons for rerun
-Category 'other':
-  Rerun of 'pdflatex' forced or previously required:
-    Reason or flag: 'Initial setup'
+Changed files or newly in use/created:
+  ../input/figure_hwy.jpg
+  ../input/table_reg.tex
+  C:/Users/chadi/AppData/Local/MiKTeX/miktex/data/le/pdftex/pdflatex.fmt
+  my_project.bbl
+Category 'changed_user':
+  ../input/figure_hwy.jpg
+  ../input/table_reg.tex
+  C:/Users/chadi/AppData/Local/MiKTeX/miktex/data/le/pdftex/pdflatex.fmt
 
 ------------
 Run number 1 of rule 'pdflatex'
@@ -140,39 +144,28 @@ fg))
 (C:\Users\chadi\AppData\Local\Programs\MiKTeX\tex/latex/psnfss\ts1ptm.fd)
 [1{C:/Users/chadi/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map}{C:/Users/ch
 adi/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/base/8r.enc}]
-
-Package natbib Warning: Citation `Arrow1974' on page 2 undefined on input line 
-55.
-
-
-Package natbib Warning: Citation `Becker2009' on page 2 undefined on input line
- 55.
-
-
-Package natbib Warning: Citation `Friedman1970' on page 2 undefined on input li
-ne 55.
-
-
 [2]
 [3]
-[4]
-No file my_project.bbl.
+[4] (my_project.bbl)
+[5]
+[6 <../input/figure_city.jpg> <../input/figure_hwy.jpg>]
+(../input/table_reg.tex)
+[7] (my_project.aux) )<C:/Users/chadi/AppData/Local/Programs/MiKTeX/fonts/type1
+/public/amsfonts/cm/cmmi12.pfb><C:/Users/chadi/AppData/Local/Programs/MiKTeX/fo
+nts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/chadi/AppData/Local/Programs/
+MiKTeX/fonts/type1/urw/times/utmb8a.pfb><C:/Users/chadi/AppData/Local/Programs/
+MiKTeX/fonts/type1/urw/times/utmr8a.pfb><C:/Users/chadi/AppData/Local/Programs/
+MiKTeX/fonts/type1/urw/times/utmri8a.pfb>
+Output written on my_project.pdf (7 pages, 130441 bytes).
+Transcript written on my_project.log.
+Latexmk: Getting log file 'my_project.log'
+Latexmk: Examining 'my_project.fls'
+Latexmk: ============== Inequiv cwd_fls cwd 'C:/Users/chadi/Dropbox/GentzkowLabTemplate/4_paper/source' '/c/Users/chadi/Dropbox/GentzkowLabTemplate/4_paper/source'
+Latexmk: Examining 'my_project.log'
+Latexmk: Found input bbl file 'my_project.bbl'
+Latexmk: Log file says output to 'my_project.pdf'
+Latexmk: Found bibliography file(s):
+  ./my_project.bib
+Latexmk: All targets (my_project.pdf) are up-to-date
 
-LaTeX Warning: File `../input/figure_city.jpg' not found on input line 91.
-
-
-! Package pdftex.def Error: File `../input/figure_city.jpg' not found: using dr
-aft setting.
-
-See the pdftex.def package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.91 ...hics[scale=0.16]{../input/figure_city.jpg}
-                                                  
-? Type <return> to proceed, S to scroll future error messages,
-R to run without stopping, Q to run quietly,
-I to insert something, E to edit your file,
-1 or ... or 9 to ignore the next 1 to 9 tokens of input,
-H for help, X to quit.
-? 
+make.sh finished at 2024-09-12 09:25:07

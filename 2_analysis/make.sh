@@ -27,7 +27,7 @@ mkdir -p "${MAKE_SCRIPT_DIR}/output"
 # (Make sure this section is updated to pull in all needed input files!)
 rm -rf "${MAKE_SCRIPT_DIR}/input"
 mkdir -p "${MAKE_SCRIPT_DIR}/input"
-# cp my_source_files "${MAKE_SCRIPT_DIR}/input/"
+cp "${REPO_ROOT}/0_raw/mpg.csv" "${MAKE_SCRIPT_DIR}/input/"
 
 # Tell user what we're doing
 echo -e "\n\nMaking module \033[35m${MODULE}\033[0m with shell ${SHELL}"
@@ -40,7 +40,7 @@ echo -e "\n\nMaking module \033[35m${MODULE}\033[0m with shell ${SHELL}"
     echo -e "make.sh started at $(date '+%Y-%m-%d %H:%M:%S')"
 
     cd source
-    run_shell my_shell_script.sh "${LOGFILE}"
+    #run_shell my_shell_script.sh "${LOGFILE}"
 	run_python analyze_data.py "${LOGFILE}"
     run_R analyze_data.r "${LOGFILE}"
     
