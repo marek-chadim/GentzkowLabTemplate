@@ -14,7 +14,9 @@ source "${REPO_ROOT}/lib/shell/check_setup.sh"
 # Load settings & tools
 source "${REPO_ROOT}/local_env.sh"
 source "${REPO_ROOT}/lib/shell/run_shell.sh"
-#source "${REPO_ROOT}/lib/shell/run_xxx.sh"
+source "${REPO_ROOT}/lib/shell/run_python.sh"
+source "${REPO_ROOT}/lib/shell/run_R.sh"
+source "${REPO_ROOT}/lib/shell/run_stata.sh"
 
 # Clear output directory
 # (Guarantees that all output is produced from a clean run of the code)
@@ -39,7 +41,9 @@ echo -e "\n\nMaking module \033[35m${MODULE}\033[0m with shell ${SHELL}"
 
     cd source
     run_shell my_shell_script.sh "${LOGFILE}"
-	# run_xxx my_script.xx "${LOGFILE}"
+	run_python analyze_data.py "${LOGFILE}"
+    run_R analyze_data.r "${LOGFILE}"
+    
 
 ) 2>&1 | tee "${LOGFILE}"
 
