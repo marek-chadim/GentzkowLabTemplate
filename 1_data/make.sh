@@ -29,6 +29,7 @@ source "${REPO_ROOT}/lib/shell/run_stata.sh"
 source "${REPO_ROOT}/lib/shell/run_python.sh"
 source "${REPO_ROOT}/lib/shell/run_julia.sh"
 source "${REPO_ROOT}/lib/shell/run_matlab.sh"
+source "${REPO_ROOT}/lib/shell/run_rmd.sh"
 
 # Clear output directory
 # (Guarantees that all output is produced from a clean run of the code)
@@ -51,10 +52,11 @@ cd "${MAKE_SCRIPT_DIR}/source"
 
 #run_shell my_shell_script.sh "${LOGFILE}" || exit 1
 #run_R wrangle_data.r "${LOGFILE}" || exit 1
-run_stata wrangle_data.do "${LOGFILE}" || exit 1
+#run_stata wrangle_data.do "${LOGFILE}" || exit 1
 #run_python wrangle_data.py "${LOGFILE}" || exit 1
 #run_julia wrangle_data.jl "${LOGFILE}" || exit 1
 #run_matlab wrangle_data.m "${LOGFILE}" || exit 1
+run_rmd my_report.rmd "${LOGFILE}" || exit 1
 
 ) || false
 
